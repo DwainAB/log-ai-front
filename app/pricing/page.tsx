@@ -1,6 +1,7 @@
 import { Navbar } from "@/app/components/navbar";
 import { PricingCards } from "@/app/components/pricing-cards";
 import { PricingComparison } from "@/app/components/pricing-comparison";
+import { PricingCtaBento } from "@/app/components/pricing-cta-bento";
 import { PricingHero } from "@/app/components/pricing-hero";
 import { SiteFooter } from "@/app/components/site-footer";
 
@@ -13,6 +14,7 @@ export default function PricingPage() {
         <PricingHero />
         <PricingCards />
         <PricingComparison />
+        <PricingCtaBento />
       </main>
 
       <SiteFooter />
