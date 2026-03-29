@@ -1,23 +1,41 @@
-export function Navbar() {
+const NAV_LINKS = [
+  { label: "Features", href: "/" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Docs", href: "#" },
+  { label: "Changelog", href: "#" },
+];
+
+interface NavbarProps {
+  activePage?: string;
+}
+
+export function Navbar({ activePage = "Features" }: NavbarProps) {
   return (
     <nav className="fixed top-0 z-50 mx-auto flex h-20 w-full max-w-full items-center justify-between bg-surface/60 bg-gradient-to-b from-[#1e2023]/10 to-transparent px-8 shadow-2xl shadow-black/50 backdrop-blur-xl">
       <div className="flex items-center gap-8">
-        <span className="font-headline text-2xl font-black tracking-tighter text-[#f0f0f5]">
+        <a href="/" className="font-headline text-2xl font-black tracking-tighter text-[#f0f0f5]">
           Obsidian AI
-        </span>
+        </a>
         <div className="hidden items-center gap-6 font-headline font-bold tracking-tight md:flex">
-          <a className="border-b-2 border-[#adc6ff] pb-1 text-[#adc6ff]" href="#">
-            Features
-          </a>
-          <a className="text-[#c1c6d7] transition-colors hover:text-[#f0f0f5]" href="#">
-            Pricing
-          </a>
-          <a className="text-[#c1c6d7] transition-colors hover:text-[#f0f0f5]" href="#">
-            Docs
-          </a>
-          <a className="text-[#c1c6d7] transition-colors hover:text-[#f0f0f5]" href="#">
-            Changelog
-          </a>
+          {NAV_LINKS.map(({ label, href }) =>
+            label === activePage ? (
+              <a
+                key={label}
+                className="border-b-2 border-[#adc6ff] pb-1 text-[#adc6ff]"
+                href={href}
+              >
+                {label}
+              </a>
+            ) : (
+              <a
+                key={label}
+                className="text-[#c1c6d7] transition-colors hover:text-[#f0f0f5]"
+                href={href}
+              >
+                {label}
+              </a>
+            )
+          )}
         </div>
       </div>
       <div className="flex items-center gap-4">
