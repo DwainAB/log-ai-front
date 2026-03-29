@@ -1,4 +1,5 @@
 import { Navbar } from "@/app/components/navbar";
+import { PricingCards } from "@/app/components/pricing-cards";
 import { PricingHero } from "@/app/components/pricing-hero";
 import { SiteFooter } from "@/app/components/site-footer";
 
@@ -9,6 +10,7 @@ export default function PricingPage() {
 
       <main className="mx-auto max-w-7xl px-6 pb-20 pt-32">
         <PricingHero />
+        <PricingCards />
       </main>
 
       <SiteFooter />
