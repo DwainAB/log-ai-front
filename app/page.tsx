@@ -336,7 +336,72 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className="relative overflow-hidden py-32">
+          <div className="absolute inset-0 bg-primary/5 blur-[120px]"></div>
+          <div className="relative z-10 mx-auto max-w-4xl px-8 text-center">
+            <h2 className="mb-6 font-headline text-5xl font-extrabold tracking-tight text-on-surface">
+              Ready to master your infrastructure?
+            </h2>
+            <p className="mb-12 text-xl text-on-surface-variant">
+              Start your 14-day free trial today. No credit card required.
+            </p>
+            <div className="flex flex-col items-center justify-center gap-6 md:flex-row">
+              <button className="font-headline w-full rounded-2xl bg-primary px-10 py-5 font-extrabold text-on-primary shadow-xl shadow-primary/20 transition-all hover:scale-[1.05] md:w-auto">
+                Get your API key
+              </button>
+              <button className="font-headline w-full rounded-2xl border border-outline-variant bg-transparent px-10 py-5 font-extrabold text-on-surface transition-all hover:bg-surface-container-high md:w-auto">
+                Talk to an Engineer
+              </button>
+            </div>
+          </div>
+        </section>
       </main>
+
+      <footer className="border-t border-[#1e2023] bg-[#111316] py-12">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-8 md:flex-row">
+          <div className="flex flex-col items-center gap-4 md:items-start">
+            <span className="font-headline text-xl font-bold text-[#c1c6d7]">
+              Obsidian AI
+            </span>
+            <p className="font-label text-xs tracking-wider text-[#c1c6d7]/60">
+              © 2024 Obsidian AI. Built for the high-concurrency era.
+            </p>
+          </div>
+          <div className="font-label flex gap-8 text-xs tracking-wider">
+            <a
+              className="text-[#c1c6d7]/60 transition-colors hover:text-[#adc6ff]"
+              href="#"
+            >
+              Status
+            </a>
+            <a
+              className="text-[#c1c6d7]/60 transition-colors hover:text-[#adc6ff]"
+              href="#"
+            >
+              Privacy
+            </a>
+            <a
+              className="text-[#c1c6d7]/60 transition-colors hover:text-[#adc6ff]"
+              href="#"
+            >
+              Terms
+            </a>
+            <a
+              className="text-[#c1c6d7]/60 transition-colors hover:text-[#adc6ff]"
+              href="#"
+            >
+              Security
+            </a>
+            <a
+              className="text-[#c1c6d7]/60 transition-colors hover:text-[#adc6ff]"
+              href="#"
+            >
+              Contact
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
